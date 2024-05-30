@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Se establece el juego de caracteres y la escala inicial -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página -->
+    <title>Consulta de Asesoría Energética</title>
+    <!-- Se enlazan las hojas de estilo de Bootstrap y Animate.css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        /* Estilos personalizados */
+        body {
+            background-color: #f8f9fa; /* Color de fondo */
+        }
+        .container {
+            background-color: #ffffff; /* Fondo del contenedor */
+            padding: 20px; /* Espaciado interno */
+            border-radius: 8px; /* Bordes redondeados */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+        }
+        h1 {
+            margin-bottom: 20px; /* Espaciado inferior para el título */
+            color: #343a40; /* Color del texto */
+        }
+        .form-group {
+            margin-bottom: 20px; /* Espaciado inferior para los elementos del formulario */
+        }
+        .card {
+            margin-bottom: 20px; /* Espaciado inferior para las tarjetas */
+        }
+        .card-header {
+            background-color: #343a40; /* Fondo del encabezado de la tarjeta */
+            color: #ffffff; /* Color del texto del encabezado de la tarjeta */
+        }
+        .navbar-brand {
+            font-size: 2rem; /* Tamaño de la fuente del logotipo de la barra de navegación */
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-dark bg-info">
+        <span class="navbar-brand mb-0 h1 mr-auto ml-auto">Consulta de Asesoría Energética</span>
+        <a href="grafica.html" class="btn btn-primary">Ver Gráfica</a>
+    </nav>
+    
+    <!-- Contenedor principal -->
+    <div class="container mt-3">
+        <!-- Título principal -->
+        <h1>Buscar Contratos</h1>
+        <!-- Formulario de búsqueda -->
+        <form>
+            <!-- Campo CIF -->
+            <div class="form-group row">
+                <label for="cifInput" class="col-sm-2 col-form-label">CIF:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="cifInput">
+                </div>
+            </div>
+            <!-- Campo Nombre -->
+            <div class="form-group row">
+                <label for="nameInput" class="col-sm-2 col-form-label">Nombre:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="nameInput">
+                </div>
+            </div>
+            <!-- Campo Comercializadora -->
+            <div class="form-group row">
+                <label for="commercializerInput" class="col-sm-2 col-form-label">Comercializadora:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="commercializerInput">
+                </div>
+            </div>
+            <!-- Campo Estado -->
+            <div class="form-group row">
+                <label for="stateInput" class="col-sm-2 col-form-label">Estado:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="stateInput">
+                </div>
+            </div>
+            <!-- Botón de búsqueda -->
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="button" class="btn btn-primary" onclick="searchContracts()">Buscar</button>
+                </div>
+            </div>
+        </form>
+        <!-- Contenedor de resultados -->
+        <div class="mt-4" id="results"></div>
+    </div>
+    <!-- Se enlazan los scripts -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>

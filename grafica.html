@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfica de Contratos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .chart-container {
+            margin-bottom: 20px;
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+        .btn-primary {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-info">
+        <span class="navbar-brand mb-0 h1 mr-auto ml-auto">Consulta de Asesoría Energética</span>
+        <a href="consulta.html" class="btn btn-primary">Ver Consultas</a>
+    </nav>
+    
+    <div class="container">
+        <h1 class="mt-4">Gráfica de Contratos</h1>
+        <div class="chart-container">
+            <canvas id="chartEstados"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="chartPagados"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="chartComercializadoras"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
